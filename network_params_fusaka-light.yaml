@@ -1,0 +1,37 @@
+# https://fusaka-light.box
+#
+# Save this config as `~/Downloads/network_params_fusaka-light.yaml`
+#
+# Setup:
+# - https://docs.kurtosis.com/install
+#
+# Stop:
+# $ kurtosis enclave rm fusaka-light --force
+#
+# Start:
+# $ kurtosis run --enclave fusaka-light --image-download always github.com/ethpandaops/ethereum-package "$(cat ~/Downloads/network_params_fusaka-light.yaml)"
+#
+# Logs:
+# $ kurtosis service logs fusaka-light -f
+#
+# Network config:
+# $ kurtosis files download fusaka-light el_cl_genesis_data ./metadata
+#
+# API endpoints:
+# $ kurtosis enclave inspect fusaka-light
+
+participants:
+  - el_type: ethereumjs
+    el_image: ethpandaops/ethereumjs:eip-6493
+    cl_type: nimbus
+    cl_image: ethpandaops/nimbus-eth2:fusaka-light
+    use_separate_vc: false
+
+network_params:
+  electra_fork_epoch: 1
+  seconds_per_slot: 12
+
+additional_services:
+  - tx_spammer
+
+snooper_enabled: true
