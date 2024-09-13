@@ -13,9 +13,11 @@
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ | ✅ |
 || ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
 || ↑ 32-byte address capacity in SSZ?
+|| Transaction inclusion proofs | ❌ | n/a | ✅ | ❌ | ✅ |
 || [EIP-6466: SSZ Receipts Root](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ❌ | ❌ | ❌ |
 || ↑ [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706)
 || ↑ Remove logs bloom from receipts
+|| Receipt inclusion proofs | ❌ | n/a | ❌ | ❌ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ❌ | ❌ | ❌ |
 || SSZ Requests Root | ❌ | ❌ | ❌ | ❌ | ❌ |
 || [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493) | ❌ | n/a | ❌ | ❌ | ❌ |
