@@ -10,7 +10,7 @@
 || ↑ Nested `StableContainer` optimizations?
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ❌ | ✅ |
 | 🪓 | **MPT removal**
-|| [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | ❌ | ✅ | ✅ | ❌ | ✅ |
+|| [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ | ✅ |
 || ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
 || ↑ 32-byte address capacity in SSZ?
 || [EIP-6466: SSZ Receipts Root](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ❌ | ❌ | ❌ |
