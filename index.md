@@ -25,7 +25,7 @@
 || ↑ Withdrawals
 || ↑ Fees
 || ↑ 0 ETH transfers
-|| [Parallel post-state roots (in state trie)](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots) | ❌ | n/a | ❌ | ❌ | ❌ |
+|| [Parallel post-state roots (in state trie)](./el_logs.md) | ❌ | n/a | ❌ | ❌ | ❌ |
 || ↑ JSON-RPC API for verifiable logs enumeration
 || [Parallel post-state roots (full IVC)](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots) | ❌ | n/a | ❌ | ❌ | ❌ |
 | 🚀 | **CL/EL performance**
