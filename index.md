@@ -8,8 +8,7 @@
 | 🪓 | **MPT removal**
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ✅ | ❌ |
 || [EIP-6466: SSZ Receipts Root](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ❌ | ❌ | ❌ |
-|| ↑ [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706)
-|| ↑ [Remove logs bloom from receipts](./el_receipt.md)
+|| ↑ [Remove logs bloom from receipts](https://github.com/ethereum/EIPs/pull/8939)
 || [SSZ Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ✅ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ❌ | ❌ | ❌ |
 || [SSZ Requests Root](https://eips.ethereum.org/EIPS/eip-7688) | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -26,6 +25,7 @@
 || [Parallel post-state roots (full IVC)](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots) | ❌ | n/a | ❌ | ❌ | ❌ |
 | 🚀 | **CL/EL performance**
 || SSZ Block Header | ❌ | ❌ | ❌ | ❌ | ❌ |
+|| ↑ [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706)
 || ↑ [Remove logs bloom from block header](./el_block_hash.md)
 || ↑ Use block header root in ePBS
 || SSZ Engine API | ❌ | ❌ | ❌ | ❌ | n/a |
