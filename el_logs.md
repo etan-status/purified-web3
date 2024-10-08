@@ -36,6 +36,8 @@ def track_log(evm: Evm, log: Log) -> None:
     accumulate_log(evm, log_root, keccak256(abi.encode(log.address, LOG_ADDRESS_STORAGE_SLOT)))
 ```
 
+To support parallel transaction execution, the log accumulators should probably be updated _after_ all transactions have been executed. Otherwise transactions that share a topic (e.g., `Transfer`) become mutually exclusive and have to be sequentialized. This is in line with current mainnet where receipts only become available _after_ the state root has been updated, but may need additional bookkeeping to track the ETH transfers from internal calls / delegatecalls.
+
 Flow is then, for `eth_getLogs(address, topics, fromBlock, toBlock)`:
 
 - Assumption: Client application knows `fromBlock` and `toBlock` hash
@@ -45,17 +47,73 @@ Flow is then, for `eth_getLogs(address, topics, fromBlock, toBlock)`:
 - Client application now processes `eth_getLogs` result, locally updating the log accumulator using `accumulate_log` compatible logic
 - After applying all the logs, client application verifies that its local log accumulator matches the expected value of `toBlock`'s post-state. This ensures that all logs were received without gaps
 
-For plain ETH transfers, additional logs have to be accumulated and synthesized in `eth_getLogs`, that do not necessarily have associated `Receipt`.
+---
 
-- Genesis balances (have to initialize the log accumulator contract with the synthetic genesis logs)
-- Block rewards (maybe can look how Bitcoin does it and add a transaction with no sender signature)
-- Withdrawals (similar to block rewards, they generate new coins into the EL)
-- Internal transactions triggering ETH transfers (delegatecall / call --> maybe simply emit a regular `Log` into the `Receipt`, could it be wasteful on storage? alternatively just add into the accumulator without a `Log`)
-- Gas fees / refunds (the `Receipt` already allows computing this together with the `BlockHeader`, so not needed to duplicate in the `Receipt`, but a synthetic `Log` has to be accumulated for `eth_getLogs` response -- or, just add a `Log` to the `Receipt` if storage is alright for that)
-- 0-ETH calls (a transaction that sends 0 ETH to a contract should still have an entry in the transaction history, it's something that happened to the account)
+ETH balance changes are extended to emit logs:
 
-All synthetic logs have to be computable from the full `ExecutionBlock` body (+ `Transaction` / `Receipt` / `Withdrawal` / `ExecutionRequests`). They also have to be included in `eth_getLogs` response. If a design is possible that creates `Receipt` for it, we may need additional fake transactions for newly minted coins, or additional block fields. The scheme still works as long as the synthetic logs are just accumulated in the contract and provided in `eth_getLogs` though.
+- `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
+- `topics[0]`: `keccak256('Transfer(address,address,uint256)')`
+- `topics[1]`: `from` address (zero prefixed to fill uint256)
+- `topics[2]`: `to` address (zero prefixed to fill uint256)
+- `data`: `amount` in Wei (uint256)
 
-The synthetic logs should have `address` set to a `SYSTEM_ADDRESS` that cannot be controlled by an external entity, as the `address` field is the only one that is not fakeable. If it makes sense, reuse same address as used for `WithdrawalRequest` / `ConsolidationRequest`, and have sensible topics that follow state of the art ERC standards. As in, the first topic should be based on an event signature, the account address has to be indexed, and the amount also needs to be included (un-indexed should be fine, just follow the same rules as the tokens for simplicity and consistency).
+Logs are emitted on:
 
-To support parallel transaction execution, the log accumulators should probably be updated _after_ all transactions have been executed. Otherwise transactions that share a topic (e.g., `Transfer`) become mutually exclusive and have to be sequentialized. This is in line with current mainnet where receipts only become available _after_ the state root has been updated, but may need additional bookkeeping to track the ETH transfers from internal calls / delegatecalls.
+- Regular ETH transfer from one account to another
+- Sending ETH to a contract
+- Internal transactions triggering ETH transfers (delegatecall / call)
+- Gas fees / refunds (logs for fees have their `to` set to `SYSTEM_ADDRESS`)
+- 0-ETH calls (a transaction that sends 0 ETH to a contract should still have an entry in the transaction history to reflect that the account was active)
+
+---
+
+System transactions are introduced to mint new ETH:
+
+- When a `TransactionPayload` has `max_fees_per_gas` and `max_priority_fees_per_gas` set to `None`, then while executing the transaction, no gas fee is charged.
+
+- When a `TransactionPayload` has `input_: Optional[ByteList[MAX_CALLDATA_SIZE]]` set to `None`, then while executing the transaction, only the balance is transferred but no code is called. Destination code is only called if `input_` is set to non-`None`, including `[]`.
+
+- When an `ExecutionSignature` has no active fields (i.e., `secp256k1` set to `None`), the transaction is assumed to be a system transaction, originating from `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`).
+
+- Before executing a transaction originating from `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`), the balance of `SYSTEM_ADDRESS` is set to `tx.payload.value`.
+
+```python
+class SystemExecutionSignature(Profile[ExecutionSignature]):
+    pass  # No `secp256k1` signature
+
+class MintTransactionPayload(Profile[TransactionPayload]):
+    chain_id: ChainId
+    nonce: uint64
+    gas: uint64
+    to: ExecutionAddress
+    value: uint256
+
+class MintTransaction(Container):
+    payload: MintTransactionPayload
+    signature: SystemExecutionSignature
+```
+
+ETH can then be minted with:
+
+```python
+MintTransaction(
+    payload=MintTransactionPayload(
+        chain_id=CHAIN_ID,
+        nonce=SYSTEM_ADDRESS.nonce,
+        gas=21000,
+        to=DESTINATION_ADDRESS,
+        value=amount,
+    ),
+    signature=SystemExecutionSignature(),
+)
+```
+
+Note that `MintTransaction` transfers ETH and, therefore, also emits logs as defined above in its receipt.
+
+The following changes are applied to block production:
+
+- When generating a genesis block, a `MintTransaction` is put into the `transactions` list and processed for each initial balance, similar to https://etherscan.io/txs?block=0
+- Instead of crediting block rewards, a `MintTransaction` is inserted into the `transactions` list and processed.
+- Instead of processing a withdrawal, a `MintTransaction` is inserted into the `transactions` list and processed.
+
+As part of `newPayload` validation on engine API, it is checked that inserted `MintTransaction` appear at their expected locations (for the `fee_recipient` and `withdrawals`), and that no extra `MintTransaction` is present. The CL could also do this check, for now let's keep it in the EL.
