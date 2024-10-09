@@ -22,11 +22,12 @@
 || SSZ Engine API | ❌ | ❌ | ❌ | ❌ | n/a |
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ | ❌ |
-|| ↑ Block rewards
-|| ↑ Withdrawals
-|| ↑ Fees
+|| ↑ Fees (fee burn / priority fee)
 || ↑ 0 ETH transfers
 || [Parallel post-state roots (in state trie)](./el_logs.md) | ❌ | n/a | ❌ | ❌ | ❌ |
+|| ↑ Block rewards
+|| ↑ Withdrawals
+|| ↑ Burn priority fees + re-generate in block reward
 || ↑ JSON-RPC API for verifiable logs enumeration
 || [Parallel post-state roots (full IVC)](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots) | ❌ | n/a | ❌ | ❌ | ❌ |
 | 🐣 | **Consensus light client data**
