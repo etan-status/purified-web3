@@ -32,8 +32,6 @@ def track_log(evm: Evm, log: Log) -> None:
         key = keccak256(abi.encode(log.address, topic))  # Partially cacheable hash / same prefix
         key = keccak256(abi.encode(key, LOG_ADDRESS_TOPICS_STORAGE_SLOT))
         accumulate_log(evm, log_root, key)
-
-    accumulate_log(evm, log_root, keccak256(abi.encode(log.address, LOG_ADDRESS_STORAGE_SLOT)))
 ```
 
 To support parallel transaction execution, the log accumulators should probably be updated _after_ all transactions have been executed. Otherwise transactions that share a topic (e.g., `Transfer`) become mutually exclusive and have to be sequentialized. This is in line with current mainnet where receipts only become available _after_ the state root has been updated, but may need additional bookkeeping to track the ETH transfers from internal calls / delegatecalls.
