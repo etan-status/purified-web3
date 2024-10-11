@@ -59,6 +59,10 @@ Helios needs to construct the SSZ `Receipt` `StableContainer` from JSON data, `h
 
 Withdrawals are changed to SSZ, this may affect block header validation if `withdrawals` are checked against `withdrawals_root`.
 
+# [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668)
+
+Bloom filters for logs are removed as they are not practically useable with their high false positivity rate.
+
 # [SSZ Block Header](https://fusaka-light.box/el_block_hash.html)
 
 The block hash is now computed as SSZ `hash_tree_root`. Logs Bloom and PoW fields are gone. Fees are now tracked as a multidimensional fee vector. This affects block header validation.
