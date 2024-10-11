@@ -61,6 +61,10 @@ The block hash is now computed as SSZ `hash_tree_root`. Logs Bloom and PoW field
 
 ✅ Milestone reached: Verifiable block headers (beyond what is implicitly trusted from LC protocol)
 
+# [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708)
+
+There are new logs for plain ETH transfers, fee burns, priority fee payments, block rewards, withdrawals and 0-ETH calls. For basic transfers, the new logs take a similar amount of disk space as the Bloom filter used to fill. Further improvements could consolidate the fee burn + priority fee payment to improve parallel transaction execution.
+
 # [Logs IVC](https://fusaka-light.box/el_logs.html)
 
 This is a partial implementation of [Vitalik's idea](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots). Instead of adding the external zk infrastructure, we put everything into EL state.
