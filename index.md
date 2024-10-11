@@ -36,6 +36,7 @@
 || ↑ Historical light client data API
 || ↑ [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
 | ⚙️ | **API optimizations**
+|| [Demo app](./app.md)
 || Single roundtrip `eth_call` with proofs | ❌ | n/a | ❌ | ❌ | ❌ |
 || [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language) | ❌ | ❌ | ❌ | ❌ | ❌ |
 
