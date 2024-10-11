@@ -60,6 +60,12 @@ In the response, each log has an `address`, 0-4 `topics` and `data`.
 
 The app should track the events associated with an account and list them. For known events such as `Transfer`, it should display them nicely.
 
+# Transaction details
+
+For each log, the `transactionHash` is provided in the JSON-RPC response. To query transaction details, send [`eth_getTransactionByHash`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) and [`eth_getTransactionReceipt`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_gettransactionreceipt) to the local Helios proxy.
+
+The app should allow clicking through from a log to its corresponding transaction / receipt details so that more details can be examined.
+
 # ERC20 tokens
 
 When a new ERC20 token is discovered by looking at the `address` of a `Transfer` event, information about the token can be requested from that token contract by sending [`eth_call`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_call) to the local Helios proxy.
