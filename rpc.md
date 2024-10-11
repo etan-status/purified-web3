@@ -33,6 +33,8 @@ The following JSON-RPC API methods are extended with an `inclusionProof` object 
 - `transactionRoot`: The [`hash_tree_root`](https://github.com/ethereum/consensus-specs/blob/ef434e87165e9a4c82a99f54ffd4974ae113f732/ssz/simple-serialize.md) of the transaction object. Verifying client implementations MUST check that JSON-RPC response data matches this root when converted to the [`Transaction`](./eip-6404.md#transaction-container) SSZ representation.
 - `merkleBranch`: An [SSZ Merkle proof](https://github.com/ethereum/consensus-specs/blob/ef434e87165e9a4c82a99f54ffd4974ae113f732/ssz/merkle-proofs.md) that proofs `transactionRoot` to be located at `transactionIndex` within `transactionsRoot`. Verifying client implementations MUST check correctness of this proof. The proof can be verified using [`is_valid_merkle_branch`](https://github.com/ethereum/consensus-specs/blob/ef434e87165e9a4c82a99f54ffd4974ae113f732/specs/phase0/beacon-chain.md#is_valid_merkle_branch).
 
+[https://eth-light.xyz](https://eth-light.xyz) offers a viewer to inspect the SSZ representation of any Ethereum mainnet transaction.
+
 ✅ Milestone reached: Verifiable transactions
 
 # [EIP-6466: SSZ Receipts](https://eips.ethereum.org/EIPS/eip-6466)
@@ -48,6 +50,8 @@ Similar to the transactions, but for receipts.
 Proofs are on eth_getTransactionReceipt JSON-RPC, follow the same `inclusionProof` format as for transactions, but use `receiptRoot` / `receiptsRoot` / `merkleBranch`.
 
 Helios needs to construct the SSZ `Receipt` `StableContainer` from JSON data, `hash_tree_root` it then compare with `receiptRoot`. Check that `receiptRoot` is at `transactionIndex` within `receiptsRoot`. And that `receiptsRoot` matches the `blockHash`.
+
+[https://eth-light.xyz](https://eth-light.xyz) offers a viewer to inspect the SSZ representation of any Ethereum mainnet receipt.
 
 ✅ Milestone reached: Verifiable receipts
 
