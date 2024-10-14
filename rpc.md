@@ -1,3 +1,14 @@
+# Network config
+
+| Config | Value |
+| - | - |
+| Meta | https://ssz-devnet-0.ethpandaops.io |
+| CL RPC | https://bn.bootnode-1.ssz-devnet-0.ethpandaops.io |
+| EL RPC | https://rpc.bootnode-1.ssz-devnet-0.ethpandaops.io |
+| config.yaml | https://config.ssz-devnet-0.ethpandaops.io/cl/config.yaml |
+| genesis.ssz | https://config.ssz-devnet-0.ethpandaops.io/cl/genesis.ssz |
+| genesis.json | https://config.ssz-devnet-0.ethpandaops.io/el/genesis.json |
+
 # General
 
 The Fusaka-Light devnet builds on top of Prague/Electra. All features are enabled with `ELECTRA_FORK_EPOCH` / at the prague timestamp. This is the scope of initial devnet:

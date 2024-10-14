@@ -1,3 +1,14 @@
+# Network config
+
+| Config | Value |
+| - | - |
+| Meta | https://ssz-devnet-0.ethpandaops.io |
+| CL RPC | https://bn.bootnode-1.ssz-devnet-0.ethpandaops.io |
+| EL RPC | https://rpc.bootnode-1.ssz-devnet-0.ethpandaops.io |
+| config.yaml | https://config.ssz-devnet-0.ethpandaops.io/cl/config.yaml |
+| genesis.ssz | https://config.ssz-devnet-0.ethpandaops.io/cl/genesis.ssz |
+| genesis.json | https://config.ssz-devnet-0.ethpandaops.io/el/genesis.json |
+
 # Light clients
 
 Ethereum is accessed via two servers, one provides consensus data (what is the latest block), the other provides execution data (what are the transactions in the blocks, what are the balances and so on). Anyone can provide those servers, but they are too heavy to run on phones, browser extensions and so on. Those are called light clients and need to query someone else's server.
