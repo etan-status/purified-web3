@@ -40,4 +40,4 @@
 || Single roundtrip `eth_call` with proofs | ❌ | n/a | ❌ | ❌ | ❌ |
 || [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language) | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-[Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
+[Discord](https://discord.gg/xUmjdjzMNY) | [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
