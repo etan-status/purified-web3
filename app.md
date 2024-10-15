@@ -3,6 +3,7 @@
 | Config | Value |
 | - | - |
 | Meta | https://ssz-devnet-0.ethpandaops.io |
+| Faucet | https://faucet.ssz-devnet-0.ethpandaops.io |
 | CL RPC | https://bn.bootnode-1.ssz-devnet-0.ethpandaops.io |
 | EL RPC | https://rpc.bootnode-1.ssz-devnet-0.ethpandaops.io |
 | config.yaml | https://config.ssz-devnet-0.ethpandaops.io/cl/config.yaml |
