@@ -34,4 +34,7 @@ network_params:
 additional_services:
   - tx_spammer
 
+tx_spammer_params:
+  tx_spammer_extra_args: ["--accounts=5"]
+
 snooper_enabled: true
