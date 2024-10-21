@@ -22,7 +22,7 @@
 
 participants:
   - el_type: ethereumjs
-    el_image: ethpandaops/ethereumjs:eip-6493
+    el_image: ethpandaops/ethereumjs:fusaka
     cl_type: nimbus
     cl_image: ethpandaops/nimbus-eth2:fusaka-light
     use_separate_vc: false
