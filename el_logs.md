@@ -1,6 +1,6 @@
 ```python
 class BlockMeta(Container):
-    number: uint64
+    timestamp: uint64
     root: Root
 
 class LogMeta(Container):
