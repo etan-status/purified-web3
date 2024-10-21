@@ -12,17 +12,14 @@
 || [SSZ Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ❌ |
 || [SSZ Requests Root](https://eips.ethereum.org/EIPS/eip-7688) | ❌ | ❌ | ✅ | n/a |
-|| ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
 | 🚀 | **CL/EL performance**
 || SSZ Block Header | ❌ | ❌ | ✅ | ❌ |
 || ↑ [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706)
 || ↑ [Remove logs bloom from block header](./el_block_hash.md)
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
-|| ↑ Fees (fee burn / priority fee)
-|| ↑ 0 ETH transfers
 || ↑ [Log types](./el_logs.md)
-|| [EIP-####: Verifiable logs](https://github.com/ethereum/EIPs/pull/8984/files) | ❌ | n/a | ✅ | ❌ |
+|| [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 || ↑ [JSON-RPC API for verifiable logs enumeration](./rpc.md)
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
@@ -31,6 +28,7 @@
 || ↑ [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
 | 🚧 | **Future**
 || [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
+|| ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
 || SSZ Engine API
 || Single roundtrip `eth_call` with proofs
 || [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
