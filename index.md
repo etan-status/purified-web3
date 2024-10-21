@@ -23,14 +23,14 @@
 || ↑ [JSON-RPC API for verifiable logs enumeration](./rpc.md)
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
-|| ↑ Trusted block root in consensus network config
-|| ↑ Historical light client data API
-|| ↑ [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
 | 🚧 | **Future**
 || [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
 || ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
 || SSZ Engine API
 || Single roundtrip `eth_call` with proofs
 || [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
+|| Trusted block root in consensus network config
+|| Historical light client data API
+|| [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
 
 [Demo app](./app.md) | [Kurtosis](./network_params_fusaka-light.yaml) | [Discord](https://discord.gg/xUmjdjzMNY) | [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
