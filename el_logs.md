@@ -1,8 +1,20 @@
 ```python
+class BlockMeta(Container):
+    number: uint64
+    root: Root
+
+class LogMeta(Container):
+    block: BlockMeta
+    transaction_root: Root  # All zero for system logs
+
 class Log(Container):
     address: ExecutionAddress
     topics: List[Bytes32, MAX_TOPICS_PER_LOG]  # Should we change this to 4 topic fields and make the entire thing stablecontainer for extensibility?
     data: ByteList[MAX_LOG_DATA_SIZE]
+
+class AccumulatedLog(Container):
+    meta: LogMeta
+    log_root: Root
 
 LOG_CONTRACT_ADDRESS = ExecutionAddress()  # A contract with 3x `mapping` and no code
 
@@ -16,7 +28,7 @@ def accumulate_log(evm: Evm, log_root: Bytes32, key: Bytes32):
     root.update(sload(evm.env.state, LOG_CONTRACT_ADDRESS, key))  # Cacheable account lookup in trie
     sstore(evm.env.state, LOG_CONTRACT_ADDRESS, key, root.digest())
 
-def track_log(evm: Evm, log: Log) -> None:
+def track_log(evm: Evm, log: AccumulatedLog) -> None:
     log_root = log.hash_tree_root()
 
     # Allow eth_getLogs proof via `address` filter
