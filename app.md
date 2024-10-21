@@ -58,14 +58,17 @@ In the response, each log has an `address`, 0-4 `topics` and `data`.
 
 - `topics[0]` is `keccak256(event_signature)`. Reverse lookup via [https://www.4byte.directory](https://www.4byte.directory).
     - `topics[0]` for `Transfer(address,address,uint256)` is [`0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef`](https://www.4byte.directory/event-signatures/?bytes_signature=0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef)
+    - `topics[0]` for `Fee(address,uint256)` is [`0x7bd3aa7d673767f759ebf216e7f6c12844986c661ae6e0f1d988cf7eb7394d1d`](https://www.4byte.directory/event-signatures/?bytes_signature=0x7bd3aa7d673767f759ebf216e7f6c12844986c661ae6e0f1d988cf7eb7394d1d)
+    - `topics[0]` for `PriorityRewards(address,uint256)` is [`0x5dfe9c0fd3043bb299f97cfece428f0396cf8b7890c525756e4ea5c0ff7d61b2`](https://www.4byte.directory/event-signatures/?bytes_signature=0x5dfe9c0fd3043bb299f97cfece428f0396cf8b7890c525756e4ea5c0ff7d61b2)
+    - `topics[0]` for `Withdrawal(address,uint256)` is [`0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65`](https://www.4byte.directory/event-signatures/?bytes_signature=0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65)
 - `address` indicates what address originated the event.
     - For plain ETH `Transfer`, `address` is [`0xfffffffffffffffffffffffffffffffffffffffe`](./el_logs.md).
     - For ERC20 token `Transfer`, `address` is the token contract address.
 - `topics[1 ..< 4]` contain indexed arguments of the event.
     - For `Transfer`, `topics[1]` is the `from` address (zero prefixed to fill uint256)
-        - For plain ETH, `topics[1]` is set to `0xfffffffffffffffffffffffffffffffffffffffe` when new ETH is minted to the account (block reward / withdrawal from validator)
     - For `Transfer`, `topics[2]` is the `to` address (zero prefixed to fill uint256)
-        - For plain ETH, `topics[2]` is set to `0xfffffffffffffffffffffffffffffffffffffffe` when paying for transaction fees.
+    - For `Fee`, `topics[1]` is the `from` address (zero prefixed to fill uint256)
+    - For `PriorityRewards` and `Withdrawal`, `topics[1]` is the `to` address (zero prefixed to fill uint256)
 - `data` contains non-indexed arguments of the event.
     - For `Transfer`, this is a big-endian `uint256` containing the amount
         - For plain ETH, this is in Wei (10^-18 ETH)

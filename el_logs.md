@@ -59,6 +59,10 @@ Flow is then, for `eth_getLogs(address, topics, fromBlock, toBlock)`:
 
 ---
 
+`eth_getLogs` response data is extended with `blockTimestamp`.
+
+---
+
 ETH balance changes are extended to emit logs:
 
 - `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
@@ -72,58 +76,46 @@ Logs are emitted on:
 - Regular ETH transfer from one account to another
 - Sending ETH to a contract
 - Internal transactions triggering ETH transfers (delegatecall / call)
-- Gas fees / refunds (logs for fees have their `to` set to `SYSTEM_ADDRESS`)
 - 0-ETH calls (a transaction that sends 0 ETH to a contract should still have an entry in the transaction history to reflect that the account was active)
 
 ---
 
-System transactions are introduced to mint new ETH:
+Transaction fees are extended to emit logs:
 
-- When a `TransactionPayload` has `max_fees_per_gas` and `max_priority_fees_per_gas` set to `None`, then while executing the transaction, no gas fee is charged.
+- `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
+- `topics[0]`: `keccak256('Fee(address,uint256)')`
+- `topics[1]`: `from` address (zero prefixed to fill uint256)
+- `data`: `amount` in Wei (uint256)
 
-- When a `TransactionPayload` has `input_: Optional[ByteList[MAX_CALLDATA_SIZE]]` set to `None`, then while executing the transaction, only the balance is transferred but no code is called. Destination code is only called if `input_` is set to non-`None`, including `[]`.
+Logs are emitted on:
 
-- When an `ExecutionSignature` has no active fields (i.e., `secp256k1` set to `None`), the transaction is assumed to be a system transaction, originating from `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`).
+- Gas fees / refunds (logs for fees have their `to` set to `SYSTEM_ADDRESS`)
 
-- Before executing a transaction originating from `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`), the balance of `SYSTEM_ADDRESS` is set to `tx.payload.value`.
+---
 
-```python
-class SystemExecutionSignature(Profile[ExecutionSignature]):
-    pass  # No `secp256k1` signature
+The concept of system logs is introduced, by extending the EL block header with a new field `systemLogsRoot`, which is defined as `hash_tree_root(List[Log, MAX_LOGS_PER_RECEIPT])`.
 
-class MintTransactionPayload(Profile[TransactionPayload]):
-    chain_id: ChainId
-    nonce: uint64
-    gas: uint64
-    to: ExecutionAddress
-    value: uint256
+Logs are added to the system logs list under the following conditions:
 
-class MintTransaction(Container):
-    payload: MintTransactionPayload
-    signature: SystemExecutionSignature
-```
+When crediting priority fees:
 
-ETH can then be minted with:
+- `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
+- `topics[0]`: `keccak256('PriorityRewards(address,uint256)')`
+- `topics[1]`: `to` address (zero prefixed to fill uint256)
+- `data`: `amount` in Wei (uint256)
 
-```python
-MintTransaction(
-    payload=MintTransactionPayload(
-        chain_id=CHAIN_ID,
-        nonce=SYSTEM_ADDRESS.nonce,
-        gas=21000,
-        to=DESTINATION_ADDRESS,
-        value=amount,
-    ),
-    signature=SystemExecutionSignature(),
-)
-```
+When crediting a withdrawal:
 
-Note that `MintTransaction` transfers ETH and, therefore, also emits logs as defined above in its receipt.
+- `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
+- `topics[0]`: `keccak256('Withdrawal(address,uint256)')`
+- `topics[1]`: `to` address (zero prefixed to fill uint256)
+- `data`: `amount` in Wei (uint256)
 
-The following changes are applied to block production:
+When generating a genesis block:
 
-- When generating a genesis block, a `MintTransaction` is put into the `transactions` list and processed for each initial balance, similar to https://etherscan.io/txs?block=0
-- Instead of crediting block rewards, a `MintTransaction` is inserted into the `transactions` list and processed.
-- Instead of processing a withdrawal, a `MintTransaction` is inserted into the `transactions` list and processed.
+- `address`: `0xfffffffffffffffffffffffffffffffffffffffe` (`SYSTEM_ADDRESS`)
+- `topics[0]`: `keccak256('Genesis(address,uint256)')`
+- `topics[1]`: `to` address (zero prefixed to fill uint256)
+- `data`: `amount` in Wei (uint256)
 
-As part of `newPayload` validation on engine API, it is checked that inserted `MintTransaction` appear at their expected locations (for the `fee_recipient` and `withdrawals`), and that no extra `MintTransaction` is present. The CL could also do this check, for now let's keep it in the EL.
+The CL `ExecutionPayload` structure is also extended with `system_logs_root`, which also affects light client header data.
