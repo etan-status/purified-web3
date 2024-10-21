@@ -1,10 +1,10 @@
 | | | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
 | - | - | :-: | :-: | :-: | :-: |
+| 🐣 | **Consensus light client data**
+|| [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
 | 🦒 | **Provable on-chain data**
 || [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ |
-|| ↑ Tagged `Profile` support?
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ❌ |
-|| ↑ Change `Validator` to `StableContainer`?
 | 🪓 | **MPT removal**
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ |
 || ↑ [0 address is special in authorizations](https://github.com/ethereum/EIPs/pull/8929/files)
@@ -20,9 +20,6 @@
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
 || ↑ [Log types](./el_logs.md)
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
-|| ↑ [JSON-RPC API for verifiable logs enumeration](./rpc.md)
-| 🐣 | **Consensus light client data**
-|| [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
 | 🚧 | **Future**
 || [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
 || ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
@@ -32,5 +29,9 @@
 || Trusted block root in consensus network config
 || Historical light client data API
 || [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
+|| EIP-7495: Tagged `Profile` support?
+|| EIP-7688: Change `Validator` to `StableContainer`?
 
-[Demo app](./app.md) | [Kurtosis](./network_params_fusaka-light.yaml) | [Discord](https://discord.gg/xUmjdjzMNY) | [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
+[Demo app](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml)
+
+[Discord](https://discord.gg/xUmjdjzMNY) \| [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
