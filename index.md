@@ -11,10 +11,7 @@
 || [SSZ Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ❌ |
 || [SSZ Requests Root](https://eips.ethereum.org/EIPS/eip-7688) | ❌ | ❌ | ✅ | n/a |
-| 🚀 | **CL/EL performance**
-|| SSZ Block Header | ❌ | ❌ | ✅ | ❌ |
-|| ↑ [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706)
-|| ↑ [Remove logs bloom from block header](./el_block_hash.md)
+|| [SSZ Block Header](./el_block_hash.md) | ❌ | ❌ | ✅ | ❌ |
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
 || ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
