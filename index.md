@@ -1,4 +1,4 @@
-| | | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
+| 🐼 | [🔥🔥🔥 Devnet with public RPC 🔥🔥🔥](https://ssz-devnet-0.ethpandaops.io) | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
 | - | - | :-: | :-: | :-: | :-: |
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
