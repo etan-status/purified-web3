@@ -1,10 +1,13 @@
-| 🐼 | [🔥🔥🔥 Devnet with public RPC 🔥🔥🔥](https://ssz-devnet-0.ethpandaops.io) | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
+|| [🔥🔥🔥 Devnet with public RPC 🔥🔥🔥](https://ssz-devnet-0.ethpandaops.io) | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
 | - | - | :-: | :-: | :-: | :-: |
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
 | 🦒 | **Provable on-chain data**
 || [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ |
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ❌ |
+| 🐼 | **Integrated ideas**
+|| [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668) (Receipts / Header)
+|| [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706) (Multidim fees)
 | 🪓 | **MPT removal**
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ |
 || [EIP-6466: SSZ Receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
