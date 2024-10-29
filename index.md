@@ -7,7 +7,6 @@
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ❌ |
 | 🪓 | **MPT removal**
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ |
-|| ↑ [0 address is special in authorizations](https://github.com/ethereum/EIPs/pull/8929/files)
 || [EIP-6466: SSZ Receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
 || [SSZ Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ❌ |
@@ -21,18 +20,17 @@
 || ↑ [Log types](./el_logs.md)
 || [EIP-####: System logs](https://github.com/ethereum/EIPs/pull/9002/files) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
-| 🚧 | **Future**
-|| [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
-|| ↑ [EIP-7702: Set EOA account code](https://eips.ethereum.org/EIPS/eip-7702)
-|| SSZ Engine API
-|| Single roundtrip `eth_call` with proofs
-|| [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
-|| Trusted block root in consensus network config
-|| Historical light client data API
-|| [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
-|| EIP-7495: Tagged `Profile` support?
-|| EIP-7688: Change `Validator` to `StableContainer`?
 
 [Demo app](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml)
 
 [Discord](https://discord.gg/xUmjdjzMNY) \| [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
+
+Future ideas:
+
+- [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
+- SSZ Engine API
+- Single roundtrip `eth_call` with proofs
+- [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
+- Trusted block root in consensus network config
+- Historical light client data API
+- [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
