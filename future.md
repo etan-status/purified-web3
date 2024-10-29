@@ -1,0 +1,7 @@
+- [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
+- SSZ Engine API
+- Single roundtrip `eth_call` with proofs
+- [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
+- Trusted block root in consensus network config
+- Historical light client data API
+- [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)

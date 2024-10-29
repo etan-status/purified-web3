@@ -21,16 +21,6 @@
 || [EIP-####: System logs](https://github.com/ethereum/EIPs/pull/9002/files) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 
-[Demo app](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml)
+[Wallet guide](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml) \| [Future ideas](./future.md)
 
 [Discord](https://discord.gg/xUmjdjzMNY) \| [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
-
-Future ideas:
-
-- [EIP-6493: SSZ Transaction Signature Scheme](https://eips.ethereum.org/EIPS/eip-6493)
-- SSZ Engine API
-- Single roundtrip `eth_call` with proofs
-- [SSZ query language](https://hackmd.io/@etan-status/electra-lc#SSZ-query-language)
-- Trusted block root in consensus network config
-- Historical light client data API
-- [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658)
