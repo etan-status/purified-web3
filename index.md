@@ -17,7 +17,7 @@
 || ↑ [Remove logs bloom from block header](./el_block_hash.md)
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
-|| ↑ [Log types](./el_logs.md)
+|| ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
 || [EIP-####: System logs](https://github.com/ethereum/EIPs/pull/9002/files) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 
