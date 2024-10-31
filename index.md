@@ -3,8 +3,8 @@
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
 | 🦒 | **Provable on-chain data**
-|| [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ |
-|| [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ❌ |
+|| [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ✅ |
+|| [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | ✅ |
 | 🐼 | **Integrated ideas**
 || [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668) (Receipts / Header)
 || [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706) (Multidim fees)
