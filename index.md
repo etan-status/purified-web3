@@ -11,14 +11,13 @@
 | 🪓 | **MPT removal**
 || [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ✅ |
 || [EIP-6466: SSZ Receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
-|| ↑ [Addon for Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
+|| ↑ [Addon for Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884/files) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
 || [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ✅ |
-|| [SSZ Requests Root](https://eips.ethereum.org/EIPS/eip-7688) | ❌ | ❌ | ✅ | n/a |
-|| [SSZ Block Header](./el_block_hash.md) | ❌ | ❌ | ✅ | ❌ |
+|| [EIP-####: SSZ Execution blocks](https://github.com/ethereum/EIPs/pull/9017/files) | ❌ | ❌ | ✅ | ❌ |
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
 || ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
-|| [EIP-####: System logs](https://github.com/ethereum/EIPs/pull/9002/files) | ❌ | n/a | ✅ | ❌ |
+|| [EIP-7799: System logs](https://eips.ethereum.org/EIPS/eip-7799) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 
 [Wallet guide](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml) \| [Future ideas](./future.md)
