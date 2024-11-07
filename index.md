@@ -1,4 +1,11 @@
-|| [🔥🔥🔥 Devnet with public RPC 🔥🔥🔥](https://ssz-devnet-0.ethpandaops.io) | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
+### 🛝 [Slides](./slides.pdf)
+### 🔥 [Devnet with public RPC](https://ssz-devnet-0.ethpandaops.io)
+### 📱 [Verifying wallet guide](./app.md)
+### 🔮 [Verifying proxy guide](./rpc.md)
+### 💬 [Discord](https://discord.gg/xUmjdjzMNY)
+### 📠 [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
+
+|| EIP| Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Helios](https://github.com/a16z/helios) |
 | - | - | :-: | :-: | :-: | :-: |
 | 🐣 | **Consensus light client data**
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | ✅ |
@@ -20,6 +27,4 @@
 || [EIP-7799: System logs](https://eips.ethereum.org/EIPS/eip-7799) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 
-[Wallet guide](./app.md) \| [Verifier guide](./rpc.md) \| [Kurtosis](./network_params_fusaka-light.yaml) \| [Future ideas](./future.md)
-
-[Discord](https://discord.gg/xUmjdjzMNY) \| [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
+[RLP -> MPT converting explorer](https://eth-light.xyz) \| [SSZ StableContainer implementations](https://stabilitynow.box) \| [Kurtosis](./network_params_fusaka-light.yaml) \| [Future ideas](./future.md)
