@@ -1,7 +1,7 @@
 ### 🛝 [Slides](./slides.pdf)
 ### 🔥 [Devnet with public RPC](https://ssz-devnet-0.ethpandaops.io)
 ### 📱 [Verifying wallet guide](./app.md)
-### 🔮 [Verifying proxy guide](./rpc.md)
+### 🔮 [Web3 purifier guide](./rpc.md)
 ### 💬 [Discord](https://discord.gg/xUmjdjzMNY)
 ### 📠 [Telegram](https://t.me/+ZJqjzyCQWB8xNzE0)
 
