@@ -16,10 +16,10 @@
 || [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668) (Receipts / Header)
 || [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706) (Multidim fees)
 | 🪓 | **MPT removal**
-|| [EIP-6404: SSZ Transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ✅ |
-|| [EIP-6466: SSZ Receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
-|| ↑ [Addon for Transaction / Receipt proofs](https://github.com/ethereum/EIPs/pull/8884/files) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
-|| [EIP-6465: SSZ Withdrawals Root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ✅ |
+|| [EIP-6404: SSZ transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ✅ |
+|| [EIP-6466: SSZ receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
+|| ↑ [Addon for transaction / receipt proofs](https://github.com/ethereum/EIPs/pull/8884/files) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
+|| [EIP-6465: SSZ withdrawals root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ✅ |
 || [EIP-7807: SSZ execution blocks](https://github.com/ethereum/EIPs/pull/9017/files) | ❌ | ❌ | ✅ | ❌ |
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
