@@ -20,7 +20,7 @@
 || [EIP-6466: SSZ receipts](https://eips.ethereum.org/EIPS/eip-6466) | ❌ | n/a | ✅ | ❌ |
 || ↑ [Addon for transaction / receipt proofs](https://github.com/ethereum/EIPs/pull/8884/files) | [🔗](https://github.com/ethereum/EIPs/blob/737c2c2ec68715a07534318aa67a21bd907e81ec/EIPS/eip-%23%23%23%23.md#test-cases) | n/a | ✅ | ❌ |
 || [EIP-6465: SSZ withdrawals root](https://eips.ethereum.org/EIPS/eip-6465) | ❌ | n/a | ✅ | ✅ |
-|| [EIP-7807: SSZ execution blocks](https://github.com/ethereum/EIPs/pull/9017/files) | ❌ | ❌ | ✅ | ❌ |
+|| [EIP-7807: SSZ execution blocks](https://eips.ethereum.org/EIPS/eip-7807) | ❌ | ❌ | ✅ | ❌ |
 | 💳 | **<nobr>Verifiable transaction history</nobr>**
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ |
 || ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
