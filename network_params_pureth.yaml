@@ -1,0 +1,40 @@
+# https://fusaka-light.box
+#
+# Save this config as `~/Downloads/network_params_pureth.yaml`
+#
+# Setup:
+# - https://docs.kurtosis.com/install
+#
+# Stop:
+# $ kurtosis enclave rm pureth --force
+#
+# Start:
+# $ kurtosis run --enclave pureth --image-download always github.com/ethpandaops/ethereum-package "$(cat ~/Downloads/network_params_pureth.yaml)"
+#
+# Logs:
+# $ kurtosis service logs pureth -f
+#
+# Network config:
+# $ kurtosis files download pureth el_cl_genesis_data ./metadata
+#
+# API endpoints:
+# $ kurtosis enclave inspect pureth
+
+participants:
+  - el_type: ethereumjs
+    el_image: ethpandaops/ethereumjs:fusaka
+    cl_type: nimbus
+    cl_image: ethpandaops/nimbus-eth2:pureth
+    use_separate_vc: false
+
+network_params:
+  electra_fork_epoch: 1
+  seconds_per_slot: 12
+
+additional_services:
+  - tx_spammer
+
+tx_spammer_params:
+  tx_spammer_extra_args: ["--accounts=5"]
+
+snooper_enabled: true

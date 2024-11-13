@@ -16,7 +16,7 @@ Ethereum is accessed via two servers, one provides consensus data (what is the l
 
 # Minimizing trust
 
-Light clients historically have to trust the server to provide correct data to them. This is a problem because reputable providers have a tendency to have restrictive privacy policies (logging, associating requests pertaining to a set of wallets with the sender's IP address / timing). Fusaka-light extends server data with correctness proofs so that incorrect and incomplete data can be detected. This allows light clients to send their requests to any server offering the API, and to split requests pertaining to different wallets to separate servers, improving security and privacy for end users.
+Light clients historically have to trust the server to provide correct data to them. This is a problem because reputable providers have a tendency to have restrictive privacy policies (logging, associating requests pertaining to a set of wallets with the sender's IP address / timing). Purified web3 extends server data with correctness proofs so that incorrect and incomplete data can be detected. This allows light clients to send their requests to any server offering the API, and to split requests pertaining to different wallets to separate servers, improving security and privacy for end users.
 
 # Helios
 

@@ -12,11 +12,11 @@
 
 # General
 
-The Fusaka-Light devnet builds on top of Prague/Electra. All features are enabled with `ELECTRA_FORK_EPOCH` / at the prague timestamp. This is the scope of initial devnet:
+The purified web3 devnet builds on top of Prague/Electra. All features are enabled with `ELECTRA_FORK_EPOCH` / at the prague timestamp. This is the scope of initial devnet:
 
 # [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495)
 
-This is a new SSZ type of which Merkleization must be supported to verify proofs on Fusaka-Light.
+This is a new SSZ type of which Merkleization must be supported to verify proofs on purified web3.
 
 - **Merkleization limits**: Instead of determining tree size based on number of fields, the design space limit is indicated explicitly in the type definition, e.g., `StableContainer[16]` always is hashed as if there were 16 leaves, even if there are only 4 fields.
 - **Merkleization mix-in**: In `StableContainer` all fields are optional. There is an additional mix-in for a `Bitvector[N]` that indicates which of the fields are actually in use.
@@ -75,7 +75,7 @@ Withdrawals are changed to SSZ, this may affect block header validation if `with
 
 Bloom filters for logs are removed as they are not practically useable with their high false positivity rate.
 
-# [SSZ Block Header](https://fusaka-light.box/el_block_hash.html)
+# [SSZ Block Header](https://github.com/ethereum/EIPs/pull/9017/files)
 
 The block hash is now computed as SSZ `hash_tree_root`. Logs Bloom and PoW fields are gone. Fees are now tracked as a multidimensional fee vector. This affects block header validation.
 
@@ -85,7 +85,7 @@ The block hash is now computed as SSZ `hash_tree_root`. Logs Bloom and PoW field
 
 There are new logs for plain ETH transfers, fee burns, priority fee payments, block rewards, withdrawals and 0-ETH calls. For basic transfers, the new logs take a similar amount of disk space as the Bloom filter used to fill. Further improvements could consolidate the fee burn + priority fee payment to improve parallel transaction execution.
 
-# [Logs IVC](https://fusaka-light.box/el_logs.html)
+# [Logs IVC](https://eips.ethereum.org/EIPS/eip-7792)
 
 This is a partial implementation of [Vitalik's idea](https://notes.ethereum.org/@vbuterin/parallel_post_state_roots). Instead of adding the external zk infrastructure, we put everything into EL state.
 
