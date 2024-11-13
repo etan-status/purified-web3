@@ -27,4 +27,4 @@
 || [EIP-7799: System logs](https://eips.ethereum.org/EIPS/eip-7799) | ❌ | n/a | ✅ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) | ❌ | n/a | ✅ | ❌ |
 
-[RLP -> MPT converting explorer](https://eth-light.xyz) \| [SSZ StableContainer implementations](https://stabilitynow.box) \| [Kurtosis](./network_params_pureth.yaml) \| [Future ideas](./future.md)
+[RLP -> SSZ converting explorer](https://eth-light.xyz) \| [SSZ StableContainer implementations](https://stabilitynow.box) \| [Kurtosis](./network_params_pureth.yaml) \| [Future ideas](./future.md)
