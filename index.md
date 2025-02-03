@@ -1,4 +1,4 @@
-### 🛝 [Slides](./slides.pdf)
+### 📽️ [EthereumZuri.ch 2025 talk](https://www.youtube.com/watch?v=uoCNpufygBE) ([Slides PDF](./Slides/2025-EthereumZuri.ch.pdf), [PPT](./Slides/2025-EthereumZuri.ch.pptx))
 ### 🔥 [Devnet with public RPC](https://ssz-devnet-0.ethpandaops.io)
 ### 📱 [Verifying wallet guide](./app.md)
 ### 🔮 [Web3 purifier guide](./rpc.md)
@@ -29,4 +29,4 @@
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | n/a | ✅ |
 || [EIP-7658: Light client data backfill](https://eips.ethereum.org/EIPS/eip-7658) | ❌ | ❌ | n/a | n/a | n/a |
 
-[RLP -> SSZ converting explorer](https://eth-light.xyz) \| [SSZ StableContainer implementations](https://stabilitynow.box) \| [Kurtosis](./network_params_pureth.yaml) \| [Future ideas](./future.md)
+[L1 R&D Workshop slides](./slides.pdf) \| [RLP -> SSZ converting explorer](https://eth-light.xyz) \| [SSZ StableContainer implementations](https://stabilitynow.box) \| [Kurtosis](./network_params_pureth.yaml) \| [Future ideas](./future.md)
