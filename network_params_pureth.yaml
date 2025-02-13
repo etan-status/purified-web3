@@ -22,7 +22,7 @@
 
 participants:
   - el_type: ethereumjs
-    el_image: ethpandaops/ethereumjs:fusaka
+    el_image: ethpandaops/ethereumjs:provable-web3
     cl_type: nimbus
     cl_image: ethpandaops/nimbus-eth2:pureth
     use_separate_vc: false
