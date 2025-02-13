@@ -26,7 +26,7 @@ The API used by wallets is the [Ethereum JSON-RPC API](https://ethereum.org/en/d
 
 First step is to integrate Helios into the app in some way.
 
-- [https://github.com/a16z/helios](https://github.com/a16z/helios)
+- [https://github.com/a16z/helios](https://github.com/a16z/helios) (use branch [`ssz-devnet`](https://github.com/a16z/helios/tree/ssz-devnet))
 - [https://github.com/rkreutz/HeliosKit](https://github.com/rkreutz/HeliosKit) (outdated but can be updated)
 - [https://github.com/cawfree/react-native-helios](https://github.com/cawfree/react-native-helios)
 
