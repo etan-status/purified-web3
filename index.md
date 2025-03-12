@@ -12,7 +12,7 @@
 || ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
 || [EIP-7799: System logs](https://eips.ethereum.org/EIPS/eip-7799) | ❌ | n/a | ✅ | ❌ | ❌ |
 || [EIP-7792: Verifiable logs](https://eips.ethereum.org/EIPS/eip-7792) (+ proper IVC with tee/snark) | ❌ | n/a | ✅ | ❌ | ❌ |
-|| [EIP-7745: Two dimensional log filter data structure](https://eips.ethereum.org/EIPS/eip-7745) | ❌ | n/a | ❌ | ✅ | ❌ |
+|| [EIP-7745: Two dimensional log filter data structure](https://eips.ethereum.org/EIPS/eip-7745) ([Video](https://github.com/etan-status/purified-web3/releases/download/2025-portal/2025-EIP-7745-Intro.mp4)) | ❌ | n/a | ❌ | ✅ | ❌ |
 || [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668) (see SSZ receipts / blocks)
 | 🪓 | [**<nobr>PURGE → Remove old tx types</nobr>**](https://vitalik.eth.limo/general/2024/10/26/futures5.html)
 || [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ | ✅ |
