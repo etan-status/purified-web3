@@ -8,7 +8,7 @@
 || EIP| Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Geth](https://github.com/ethereum/go-ethereum) | [Helios](https://github.com/a16z/helios/tree/ssz-devnet) |
 | - | - | :-: | :-: | :-: | :-: | :-: |
 | 🌲 | [**<nobr>SSZ (Simple Serialize)</nobr>**](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md)
-|| [EIP-7916: SSZ ProgressiveList](https://eips.ethereum.org/EIPS/eip-7916) | ❌ | ❌ | ❌ | ❌ | ❌ |
+|| [EIP-7916: SSZ ProgressiveList](https://eips.ethereum.org/EIPS/eip-7916) | ❌ | ❌ | ❌ | ✅ | ❌ |
 || [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ | ✅ |
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | n/a | ✅ |
 | 💳 | [**<nobr>PURGE → LOG reform</nobr>**](https://vitalik.eth.limo/general/2024/10/26/futures5.html)
