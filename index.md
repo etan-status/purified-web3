@@ -15,6 +15,7 @@
 || [EIP-7745: Two dimensional log filter data structure](https://eips.ethereum.org/EIPS/eip-7745) ([Video](https://github.com/etan-status/purified-web3/releases/download/2025-portal/2025-EIP-7745-Intro.mp4)) | ❌ | n/a | ❌ | ✅ | ❌ |
 || [EIP-7668: Remove bloom filters](https://eips.ethereum.org/EIPS/eip-7668) (see SSZ receipts / blocks)
 | 🪓 | [**<nobr>PURGE → Remove old tx types</nobr>**](https://vitalik.eth.limo/general/2024/10/26/futures5.html)
+|| [EIP-7916: SSZ ProgressiveList](https://eips.ethereum.org/EIPS/eip-7916) | ❌ | ❌ | ❌ | ❌ | ❌ |
 || [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ | ✅ |
 || [EIP-7706: Separate gas type for calldata](https://eips.ethereum.org/EIPS/eip-7706) (multidim concept)
 || [EIP-6404: SSZ transactions](https://eips.ethereum.org/EIPS/eip-6404) | [🔗](https://github.com/etan-status/latest_fork_tests/commit/eip-6404) | ✅ | ✅ | ❌ | ✅ |
