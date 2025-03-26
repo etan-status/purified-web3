@@ -7,7 +7,7 @@
 
 || EIP | Tests | [Nimbus](https://github.com/status-im/nimbus-eth2) | [EthJS](https://github.com/ethereumjs/ethereumjs-monorepo) | [Geth](https://github.com/ethereum/go-ethereum) | [Helios](https://github.com/a16z/helios/tree/ssz-devnet) |
 | - | - | :-: | :-: | :-: | :-: | :-: |
-| ☂️ | [**<nobr>Pureth Meta</nobr>**](https://github.com/ethereum/EIPs/pull/9546/files)
+| ☂️ | [EIP-7919: Pureth Meta](https://eips.ethereum.org/EIPS/eip-7919)
 | 📜 | [**<nobr>PURGE → LOG reform</nobr>**](https://vitalik.eth.limo/general/2024/10/26/futures5.html)
 || [EIP-7708: ETH transfers emit a log](https://eips.ethereum.org/EIPS/eip-7708) | ❌ | n/a | ❌ | ❌ | ❌ |
 || ↑ [Addon with more details](https://github.com/ethereum/EIPs/pull/9003/files)
