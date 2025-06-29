@@ -26,7 +26,7 @@
 || [EIP-7807: SSZ execution blocks](https://eips.ethereum.org/EIPS/eip-7807) (+ SSZ engine API) | ❌ | ❌ | ✅ | ❌ | ❌ |
 | 🌲 | [**<nobr>Simple Serialize (SSZ) requirements</nobr>**](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md)
 || [EIP-7916: SSZ ProgressiveList](https://eips.ethereum.org/EIPS/eip-7916) | ❌ | ❌ | ❌ | ✅ | ❌ |
-|| [EIP-7495: SSZ StableContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ | ✅ |
+|| [EIP-7495: SSZ ProgressiveContainer](https://eips.ethereum.org/EIPS/eip-7495) | [🔗](https://github.com/ethereum/consensus-specs/pull/3777) | ✅ | ✅ | ❌ | ✅ |
 || [EIP-7688: Forward compatible consensus data structures](https://eips.ethereum.org/EIPS/eip-7688) | [🔗](https://github.com/ethereum/consensus-specs/pull/3844) | ✅ | n/a | n/a | ✅ |
 | 🐣 | [**<nobr>VERGE → Basic light client support</nobr>**](https://vitalik.eth.limo/general/2024/10/23/futures4.html)
 || [Altair light client](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md) | [🔗](https://github.com/ethereum/consensus-specs/tree/dev/tests/formats/light_client) | ✅ | n/a | n/a | ✅ |
